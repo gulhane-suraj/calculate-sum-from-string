@@ -1,5 +1,6 @@
 export const add = (numbers: string): number => {
     if (!numbers) return 0;
+    if(numbers.length === 1) return parseInt(numbers, 10);
 
     let delimiter = /,|\n/; // Default delimiters: comma or newline
     if (numbers.startsWith("//")) {
